@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+.title {
+    font-family: Neucha;
+    font-size: 50px;
+    margin: 50px 0;
+    color: #313131;
+    cursor: default;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem {
+    display: block;
+}

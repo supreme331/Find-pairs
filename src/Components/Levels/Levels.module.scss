@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-family: Neucha;
+  font-size: 50px;
+  margin: 40px 0;
+  color: #313131;
+  text-align: center;
+  cursor: default;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.cardItem {
+  font-family: Neucha;
+  width: 30%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcb4;
+  border: solid 1px #838382;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 32px;
+}
+
+.cardItem:hover {
+  box-shadow: 4px 4px 15px #838382;
+  transition: all 0.15s ease;
+  transform: scale(101%);
+  cursor: pointer;
+}
+
+.completed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+
+}
+
+.notActive {
+  @extend .cardItem;
+  font-family: Neucha;
+  background-color: #d2d0d0;
+  border: solid 1px #838382;
+}
+
+.notActive:hover {
+  box-shadow: none;
+  transform: scale(100%);
+  cursor: default;
+}
