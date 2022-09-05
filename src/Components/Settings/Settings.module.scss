@@ -8,8 +8,8 @@
 
 .title {
   font-family: Neucha;
-  font-size: 50px;
-  margin: 50px 0;
+  font-size: 36px;
+  margin: 30px 0;
   color: #313131;
   text-align: center;
   cursor: default;
@@ -41,13 +41,27 @@
 }
 
 .subTitle {
-  font-size: 32px;
+  font-size: 28px;
   color: #313131;
   cursor: default;
 }
 
 .image {
-  max-height: 48px;
-  max-width: 48px;
+  max-height: 32px;
+  max-width: 32px;
   margin: 0 0 0 20px;
+}
+
+@media (min-width: 701px) {
+  .title {
+    font-size: 50px;
+    margin: 50px 0;
+  }
+  .subTitle {
+    font-size: 32px;
+  }
+  .image {
+    max-height: 48px;
+    max-width: 48px;
+  }
 }

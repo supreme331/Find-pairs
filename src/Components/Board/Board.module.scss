@@ -8,8 +8,8 @@
 
 .title {
   font-family: Neucha;
-  font-size: 50px;
-  margin: 0 0 20px 0;
+  font-size: 36px;
+  margin: 0 0 10px 0;
   cursor: default;
   text-align: center;
 }
@@ -92,3 +92,9 @@
   visibility: hidden;
 }
 
+@media (min-width: 701px) {
+  .title {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+  }
+}

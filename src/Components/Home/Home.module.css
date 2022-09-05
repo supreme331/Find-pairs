@@ -2,8 +2,8 @@
 
 .title {
     font-family: Neucha;
-    font-size: 50px;
-    margin: 50px 0;
+    font-size: 36px;
+    margin: 30px 0;
     color: #313131;
     cursor: default;
 }
@@ -15,4 +15,11 @@
 
 .menuItem {
     display: block;
+}
+
+@media (min-width: 701px) {
+    .title {
+        font-size: 50px;
+        margin: 50px 0;
+    }
 }

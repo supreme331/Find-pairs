@@ -9,8 +9,8 @@
 
 .title {
   font-family: Neucha;
-  font-size: 50px;
-  margin: 40px 0;
+  font-size: 36px;
+  margin: 10px 0;
   color: #313131;
   text-align: center;
   cursor: default;
@@ -23,11 +23,10 @@
   width: 100%;
 }
 
-
 .cardItem {
   font-family: Neucha;
   width: 30%;
-  height: 210px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +49,10 @@
   flex-direction: column;
   align-items: center;
   font-size: 22px;
-
+  img {
+    height: 48px;
+    width: 48px;
+  }
 }
 
 .notActive {
@@ -64,4 +66,20 @@
   box-shadow: none;
   transform: scale(100%);
   cursor: default;
+}
+
+@media (min-width: 701px) {
+  .title {
+    font-size: 50px;
+    margin: 40px 0;
+  }
+  .cardItem {
+    height: 210px;
+  }
+  .completed {
+    img {
+      height: 64px;
+      width: 64px;
+    }
+  }
 }

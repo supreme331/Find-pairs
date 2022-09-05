@@ -3,21 +3,23 @@
 a {
   font-family: Neucha;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 28px;
   color: #313131;
 }
 
 .root {
-  margin: 12px 0;
+  margin: 6px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   background-color: #f8f89c;
   border: 1px solid #f8f89c;
   border-radius: 20px;
   transition: all 0.3s ease;
-  padding: 15px;
+  padding: 8px 15px;
   max-width: 400px;
+  text-align: center;
 }
 
 .root:hover {
@@ -36,8 +38,8 @@ a {
 }
 
 .image {
-  max-height: 48px;
-  max-width: 48px;
+  max-height: 32px;
+  max-width: 32px;
   margin: 0 0 0 20px;
   transition: all 0.4s ease;
 }
@@ -45,4 +47,18 @@ a {
 .leftImage {
   @extend .image;
   margin: 0 20px 0 0;
+}
+
+@media (min-width: 701px) {
+  .root {
+    margin: 12px 0;
+    padding: 15px;
+  }
+  a {
+    font-size: 32px;
+  }
+  .image {
+    max-height: 48px;
+    max-width: 48px;
+  }
 }
