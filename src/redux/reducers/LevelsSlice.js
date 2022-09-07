@@ -49,7 +49,6 @@ export const levelsSlice = createSlice({
             window.localStorage.setItem('completedLevels', JSON.stringify([]))
         }
     },
-
 })
 
 export const { initLevels, setCompletedLevels, setActiveLevels, resetProgress } = levelsSlice.actions

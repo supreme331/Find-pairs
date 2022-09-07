@@ -7,7 +7,7 @@ import {Preloader} from "../Preloader/Preloader"
 import GoBackImg from "../../img/goBack.png"
 import PassedImg from "../../img/passed.png"
 
-export const Levels = () => {
+export const LevelsPage = () => {
 
     const levels = useSelector(state => state.levels.items)
     const completedLevels = useSelector(state => state.levels.completedLevels)
@@ -24,10 +24,9 @@ export const Levels = () => {
     </div>
 }
 
-
 const Card = ({level, completedLevels, activeLevels}) => {
     const dispatch = useDispatch()
-    let navigate = useNavigate();
+    let navigate = useNavigate()
     const completedLevel = completedLevels.includes(level.size)
     const isActive = activeLevels.includes(level.size)
 

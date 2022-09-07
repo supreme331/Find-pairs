@@ -5,7 +5,8 @@ import {initLevels, resetProgress} from "../../redux/reducers/LevelsSlice"
 import DeleteImg from '../../img/delete.png'
 import GoBackImg from "../../img/goBack.png"
 
-export const Settings = () => {
+export const SettingsPage = () => {
+
     const dispatch = useDispatch()
     const resetGameProgress = () => {
         if (window.confirm('Вы действительно хотите сбросить прогресс игры?')) {
@@ -13,6 +14,7 @@ export const Settings = () => {
             dispatch(initLevels())
         }
     }
+
     return <div>
         <div className={styles.title}>Настройки</div>
         <NavigateButton to={"/"} title={"На главную"} LeftImage={GoBackImg}/>

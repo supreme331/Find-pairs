@@ -1,0 +1,46 @@
+.cell {
+  width: 44px;
+  height: 44px;
+  background-color: #f6f6f6;
+  border: solid 2px #a6a4a4;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+
+.cell img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cell:hover {
+  box-shadow: 4px 4px 15px #818080;
+  transition: all 0.15s ease;
+  transform: scale(101%);
+  cursor: pointer;
+}
+
+.clicked {
+  @extend .cell;
+  background-color: #f8f89c;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+
+}
+
+.front, .back {
+  transition: 1s;
+}
+
+@media (min-width: 701px) {
+  .cell {
+    width: 94px;
+    height: 94px;
+  }
+}
