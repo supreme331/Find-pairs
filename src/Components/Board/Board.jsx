@@ -206,6 +206,8 @@ export const BoardPage = () => {
         if (isAllPairsFound) {
             if (lastLevel) {
                 victory()
+                dispatch(setCompletedLevels({size: boardSize}))
+                dispatch(setActiveLevels())
             } else {
                 dispatch(setCompletedLevels({size: boardSize}))
                 dispatch(setActiveLevels())
