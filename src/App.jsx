@@ -1,6 +1,6 @@
 import styles from './App.module.css'
 import {BoardPage} from "./Components/Board/Board"
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import {useEffect, useState} from "react"
 import {HomePage} from "./Components/Home/Home"
 import {Route, Routes} from 'react-router-dom'
@@ -12,7 +12,7 @@ import {Preloader} from "./Components/Preloader/Preloader"
 function App() {
 
     const [isInitializing, setIsInitializing] = useState(false)
-
+    const fruitNames = useSelector(state => state.board.cellsData)
     const dispatch = useDispatch()
 
     const initializeApp = () => {
@@ -34,6 +34,9 @@ function App() {
                 <Route path='/levels/' element={<LevelsPage/>}/>
                 <Route path='/settings/' element={<SettingsPage/>}/>
             </Routes>}
+            <div className={styles.hidden}>
+                {fruitNames.map((name, index) => <img key={index} rel="preload" src={require(`./img/${name}.png`)} alt="catering"/>)}
+            </div>
         </div>
     </>
 }

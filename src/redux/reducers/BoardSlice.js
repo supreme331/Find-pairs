@@ -1,48 +1,47 @@
 import {createSlice} from "@reduxjs/toolkit"
 
-let cellsData = [
-    'apricot',
-    'avocado',
-    'banana',
-    'blueberries',
-    'kiwi',
-    'orange',
-    'raspberry',
-    'strawberry',
-    'apple',
-    'cherry',
-    'grapes',
-    'mangosteen',
-    'pear',
-    'persimmon',
-    'pineapple',
-    'pomegranate',
-    'tomato',
-    'watermelon',
-    'beet',
-    'cabbage',
-    'carambola',
-    'carrot',
-    'coconut',
-    'corn',
-    'cucumber',
-    'durian',
-    'eggplant',
-    'guava',
-    'jackfruit',
-    'lemon',
-    'lychee',
-    'mandarin',
-    'mango',
-    'onion',
-    'papaya',
-    'passion',
-    'pea',
-    'pepper',
-    'potatoe',
-]
-
 const initialState = {
+    cellsData: [
+        'apricot',
+        'avocado',
+        'banana',
+        'blueberries',
+        'kiwi',
+        'orange',
+        'raspberry',
+        'strawberry',
+        'apple',
+        'cherry',
+        'grapes',
+        'mangosteen',
+        'pear',
+        'persimmon',
+        'pineapple',
+        'pomegranate',
+        'tomato',
+        'watermelon',
+        'beet',
+        'cabbage',
+        'carambola',
+        'carrot',
+        'coconut',
+        'corn',
+        'cucumber',
+        'durian',
+        'eggplant',
+        'guava',
+        'jackfruit',
+        'lemon',
+        'lychee',
+        'mandarin',
+        'mango',
+        'onion',
+        'papaya',
+        'passion',
+        'pea',
+        'pepper',
+        'potatoe',
+    ],
     boardCells: [],
     boardSize: '',
     isInit: false,
@@ -64,10 +63,10 @@ export const boardSlice = createSlice({
 
             let countOfCells = action.payload.size.split('x').reduce((a, b) => +a * +b, 1)
             let countOfDifferentFruits = countOfCells / 2
-            let randomArr = createRandomArray(cellsData.length)
+            let randomArr = createRandomArray(state.cellsData.length)
             let fruits = []
 
-            cellsData.forEach((fruit, index) => {
+            state.cellsData.forEach((fruit, index) => {
                 fruits[randomArr[index]] = fruit
             })
 
@@ -117,9 +116,9 @@ export const boardSlice = createSlice({
             state.isInit = false
             state.boardSize = action.payload.size
             let countOfCells = action.payload.size.split('x').reduce((a, b) => +a * +b, 1)
-            let randomArr = createRandomArray(cellsData.length)
+            let randomArr = createRandomArray(state.cellsData.length)
             let fruits = []
-            cellsData.forEach((fruit, index) => {
+            state.cellsData.forEach((fruit, index) => {
                 fruits[randomArr[index]] = fruit
             })
             let randomIdArr = createRandomArray(18)
